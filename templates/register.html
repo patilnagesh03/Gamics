@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'css/accounts/style.css' %}">
+</head>
+<body>
+
+    <form method="post">
+        <h3>Create an Account</h3>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Register">
+
+        <a href="{% url 'login' %}">Already have an account? Login here</a>
+    </form>
+</body>
+</html>

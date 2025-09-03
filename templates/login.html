@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/accounts/style.css' %}">
+</head>
+<body>
+    {% include "partial/message.html" %}
+    <form method="post">
+        <h3>Login to Your Account</h3>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Login">
+        <hr>
+        <a href="{% url 'register' %}">Don't have an account? Register here</a>
+    </form>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>

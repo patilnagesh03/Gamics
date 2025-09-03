@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnakeMania - Ek Gaming Katha</title>
+    <link rel="stylesheet" href="{% static "css/GameApp/snake.css" %}">
+</head>
+
+<body>
+    <img src="{% static 'img/bg.jpg' %}" 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+    alt="">
+
+    <div class="body">
+
+        <div id="scoreBox">Score: 0</div>
+        <div id="hiscoreBox">HiScore: 0</div>
+        <div id="board"></div>
+    </div>
+
+
+
+</body>
+<script src="{% static "js/GameApp/snake.js" %}"></script>
+</html>
