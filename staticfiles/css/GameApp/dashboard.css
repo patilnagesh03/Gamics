@@ -268,13 +268,13 @@ body {
   margin-block-end: 10px;
 }
 
-.section-title::after {
+/* .section-title::after {
   content: url("../images/title-underline.png");
   position: absolute;
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-}
+} */
 
 .scrollbar-item {
   min-width: 100%;
